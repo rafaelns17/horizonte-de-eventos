@@ -1,0 +1,22 @@
+{
+  "name": "Versiculo aleatório",
+  "short_name": "Meu Jogo",
+  "description": "sorteiro de um versiculo onde estiver",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#333333",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "lirio.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "lirio.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

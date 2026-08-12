@@ -5,7 +5,7 @@ class preloader extends Phaser.Scene {
 
   init(data) {
 
-    const bg = this.add.image(0, 0, "terminal").setOrigin(0, 0).setDepth(0);
+    const bg = this.add.rectangle(0, 0, this.scale.width, this.scale.height, 0x000000).setOrigin(0, 0).setDepth(0);
     const imageRatio = bg.width / bg.height;
     const screenRatio = this.scale.width / this.scale.height;
 
@@ -28,8 +28,6 @@ class preloader extends Phaser.Scene {
   }
 
   preload() {
-    this.cameras.main.setBackgroundColor("#000000");
-
     // --- SISTEMA DA BARRA DE CARREGAMENTO VISUAL (GRAPHICS) ---
     // Criamos os componentes gráficos para evitar bugs de posicionamento e escala
     const progressBox = this.add.graphics();
@@ -52,6 +50,8 @@ class preloader extends Phaser.Scene {
       progressBar.destroy();
     });
 
+   // this.cameras.main.setBackgroundColor("#000000");
+
     // --- CARREGAMENTO DOS ASSETS ---
     this.load.setPath("assets/");
 
@@ -60,7 +60,6 @@ class preloader extends Phaser.Scene {
 
   create() {
 
-    this.add.rectangle(0, 0, this.scale.width, this.scale.height, 0x000000).setOrigin(0, 0).setDepth(0);
     this.add.text(this.scale.width / 2, this.scale.height / 2, "Carregamento concluído!", {
       font: "32px Arial",
       fill: "#63ff8a",
