@@ -4,8 +4,6 @@ class preloader extends Phaser.Scene {
   }
 
   init(data) {
-    // Recebe a próxima cena (padrão "scene1")
-    this.nextScene = (data && data.startScene) || "iniciov";
 
     const bg = this.add.image(0, 0, "terminal").setOrigin(0, 0).setDepth(0);
     const imageRatio = bg.width / bg.height;
@@ -57,236 +55,23 @@ class preloader extends Phaser.Scene {
     // --- CARREGAMENTO DOS ASSETS ---
     this.load.setPath("assets/");
 
-    // Imagens de Interface e Sistema
-    this.load.image("terminal", "terminal.png");
-    this.load.spritesheet("avisoconsole", "avisoconsole.png", {
-      frameWidth: 32,
-      frameHeight: 32,
-    });
-    this.load.spritesheet("iaBox", "iaBox.png", {
-      frameWidth: 322,
-      frameHeight: 51,
-    });
-    this.load.spritesheet("bigIa", "iaBoxBig.png", {
-      frameWidth: 640,
-      frameHeight: 224,
-    });
-
-    this.load.spritesheet("iaChip", "iaChip.png", {
-      frameHeight: 32,
-      frameWidth: 32,
-    });
-    
-    this.load.image("cai", "buttons.png");
-
-    // Áudios
-    this.load.audio("passos", "walkamongus.mp3");
-    this.load.audio("trilhasonora", "trilhasonora.mp3");
-    this.load.audio("disparo", "disparo.mp3");
-    this.load.audio("explosionmeteoro", "explosionmeteoro.mp3");
-    this.load.audio("respiracao", "respiracao.mp3");
-    this.load.audio("batimentocardiaco", "batimentocardiaco.mp3");
-    this.load.audio("trilhacreditos", "trilhacreditos.mp3")
-    this.load.audio("trilhascene2", "trilhascene2.mp3");
-    this.load.audio("disparo", "disparo.mp3");
-    this.load.audio("navesendodestruida", "navesendodestruida.mp3");
-    this.load.audio("explosionmeteoro", "explosionmeteoro.mp3")
-
-    //imagem dos botões
-
-    this.load.image("funcaomanche", "funcaomanche.png")
-    this.load.image("funcaoteclado", "funcaoteclado.png")
-
-
-    // Mapas e Elementos de Cenário
-    this.load.tilemapTiledJSON("todasfases", "mapasv4/todasfases.json");
-    this.load.tilemapTiledJSON(
-      "faseortogonal",
-      "mapasv4/faseortogonalatualizada.json",
-    );
-
-    this.load.image("space", "assets-usados/space1.png");
-    this.load.image("space1", "assets-usados/space1.png");
-    this.load.image("remasterized", "assets-usados/remasterized.png");
-    this.load.image(
-      "remasterizedEnfeites",
-      "assets-usados/remasterizedEnfeites.png",
-    );
-    this.load.image("NewPiskel", "assets-usados/NewPiskel.png");
-    this.load.image("consoles", "assets-usados/console_s.png");
-    this.load.image("consolew", "assets-usados/console_w.png");
-    this.load.image("tilesetx1", "assets-usados/tilesetx1.png");
-    this.load.image("consolelongo", "assets-usados/consolelongo.png");
-    this.load.image("consolemedio", "assets-usados/consolemedio.png");
-    this.load.image("telescopio", "assets-usados/telescopio.png");
-    this.load.image("osciloscopio", "assets-usados/osciloscopio.png");
-      this.load.image("remasterized2", "assets-usados/remasterized.png");
-      this.load.image("remasterizedEnfeites","assets-usados/remasterizedEnfeites.png", );
-
-    // Personagens e Entidades
-    this.load.spritesheet("player", "player.png", {
-      frameWidth: 64,
-      frameHeight: 64,
-    });
-    this.load.spritesheet("playerroxo", "playerroxo.png", {
-      frameWidth: 64,
-      frameHeight: 64,
-    });
-
-    this.load.spritesheet("playersIcon", "playersIcon.png", {
-      frameWidth: 30,
-      frameHeight: 30,
-    });
-    this.load.spritesheet("gargantua", "assets-usados/gargantua.png", {
-      frameWidth: 320,
-      frameHeight: 320,
-    });
-    this.load.spritesheet("invisible", "InvisibleSprite.png", {
-      frameWidth: 16,
-      frameHeight: 16,
-    });
-
-    this.load.spritesheet("invisibleH", "invisibleH.png", {
-      frameWidth: 16,
-      frameHeight: 300,
-    });
-
-    this.load.spritesheet("painelLuz", "painelLuz.png", {
-      frameWidth: 96,
-      frameHeight: 64,
-    });
-
-    this.load.spritesheet("painelO2", "painelO2.png", {
-      frameWidth: 96,
-      frameHeight: 64,
-    });
-
-    this.load.spritesheet("painelfios", "painelfios.png", {
-      frameWidth: 32,
-      frameHeight: 32,
-    });
-    
-    this.load.spritesheet("plataform", "plataform.png", {
-      frameWidth: 64,
-      frameHeight: 8,
-    });
-    this.load.spritesheet("plataformG", "plataformG.png", {
-      frameWidth: 96,
-      frameHeight: 8,
-    });
-    this.load.spritesheet("door", "porta.png", {
-      frameHeight: 64,
-      frameWidth: 64,
-    });
-    this.load.spritesheet("porta", "porta64x64(2).png", {
-      frameWidth: 128,
-      frameHeight: 32,
-    });
-    this.load.spritesheet("box", "box.png", {
-      frameWidth: 64,
-      frameHeight: 64,
-    });
-    this.load.spritesheet("boxD", "boxD.png", {
-      frameWidth: 64,
-      frameHeight: 64,
-    });
-    this.load.spritesheet("engrenagem", "cartoes.png", {
-      frameWidth: 32,
-      frameHeight: 32,
-    });
-    this.load.spritesheet("jetBag", "jetpack.png", {
-      frameWidth: 20,
-      frameHeight: 23,
-    });
-
-    // Inimigos
-    this.load.spritesheet("inimigo", "inimigo3.png", {
-      frameWidth: 117,
-      frameHeight: 70,
-    });
-
-    this.load.spritesheet("torreta", "torretaetiro.png", {
-      frameWidth: 32,
-      frameHeight: 32,
-    });
-    this.load.spritesheet("turret", "turret.png", {
-      frameWidth: 32,
-      frameHeight: 32,
-    });
-    this.load.spritesheet("cannon", "cannon.png", {
-      frameWidth: 64,
-      frameHeight: 64,
-    });
-    this.load.spritesheet("ativaraliens", "ativaraliens.png", {
-      frameWidth: 32,
-      frameHeight: 32,
-    });
-     this.load.spritesheet("bigboss", "InvisibleSprite.png", {
-       frameWidth: 25,
-       frameHeight: 25,
-     });
-
-    // Projéteis e Efeitos
-    this.load.spritesheet("bulletP1", "laserBullet.png", {
-      frameWidth: 12,
-      frameHeight: 12,
-    });
-    this.load.spritesheet("faisca", "spark.png", {
-      frameWidth: 28,
-      frameHeight: 28,
-    });
-    this.load.image("tiroaliado", "tiros/tiroaliado.png");
-    this.load.image("tiroaliadoforte", "tiros/tiroaliadoforte.png");
-    this.load.image("tiroaliadomegapotente", "tiros/tiroaliadomegapotente.png");
-    this.load.image("tiroinimigo", "tiros/tiroinimigo.png");
-    this.load.image("tiroinimigoforte", "tiros/tiroinimigoforte.png");
-    this.load.image("tiroinimigomegapotente", "tiros/tiroinimigomegapotente.png");
-
-    // ADICIONA AS NOVIDADES AQUI:
   
-
-    // --- ENTRADAS NOVAS / MODIFICADAS DE NAVES ---
-    this.load.spritesheet("boss", "naves/boss.png", { frameWidth: 128, frameHeight: 128 });
-    this.load.spritesheet("escudoboss", "/escudoboss.png", { frameWidth: 128, frameHeight: 128 });
-    this.load.spritesheet("meteoro", "assets-usados/asteroideumex.png", { frameWidth: 96, frameHeight: 96 });
-    this.load.spritesheet("explosao", "assets-usados/explosion.png", { frameWidth: 32, frameHeight: 32 });
-    this.load.spritesheet("feixelaser", "/tiros/feixelaser.png", { frameWidth: 256, frameHeight: 64 });
-
-    this.load.spritesheet("nave-1", "naves/nave-1.png", { frameWidth: 128, frameHeight: 128 });
-    this.load.spritesheet("nave-2", "naves/nave-2.png", { frameWidth: 128, frameHeight: 128 });
-    this.load.spritesheet("nave-3", "naves/nave-3.png", { frameWidth: 128, frameHeight: 128 });
-    this.load.spritesheet("nave-4", "naves/nave-4.png", { frameWidth: 128, frameHeight: 128 });
-    this.load.spritesheet("nave-5", "naves/nave-5.png", { frameWidth: 128, frameHeight: 128 });
-
-    this.load.spritesheet("naveinimiga1", "naves/naveinimiga1.png", { frameWidth: 128, frameHeight: 128 });
-    this.load.spritesheet("naveinimiga2", "naves/naveinimiga2.png", { frameWidth: 128, frameHeight: 128 });
-    this.load.spritesheet("naveinimiga3", "naves/naveinimiga3.png", { frameWidth: 128, frameHeight: 128 });
-    
-    // UI e Fontes
-
-    this.load.spritesheet("vidasroxas", "vidasroxas.png", {
-      frameWidth: 48,
-      frameHeight: 16,
-    });
-    this.load.spritesheet("redLife", "redLife.png", {
-      frameHeight: 18,
-      frameWidth: 46,
-    });
-    // Fontes carregadas via CSS ou WebFontLoader
-    this.load.spritesheet("comojogar", "comojogarsprite.png", {
-      frameWidth: 32,
-      frameHeight: 32,
-    });
-
-    this.load.font("sarpanchregular", "orbitron.otf");
-    this.load.font("sarpanchextrabold", "orbitronbold.otf");
   }
 
   create() {
 
-    this.scene.stop("preloader");
-    this.scene.start(this.nextScene);
+    this.add.rectangle(0, 0, this.scale.width, this.scale.height, 0x000000).setOrigin(0, 0).setDepth(0);
+    this.add.text(this.scale.width / 2, this.scale.height / 2, "Carregamento concluído!", {
+      font: "32px Arial",
+      fill: "#63ff8a",
+    }).setOrigin(0.5, 0.5).setDepth(1);
+
+    this.time.delayedCall(1000, () => {
+      this.scene.stop("preloader");
+      this.scene.start("scene0");
+    });
   }
+
 }
 
 export default preloader;

@@ -1,46 +1,20 @@
 import config from "./config.js";
-import start from "./start.js";
-import scene0 from "./scene0.js";
-import scene1 from "./scene1.js";
-import scene2 from "./scene2.js";
 import preloader from "./preloader.js";
-import gameover1 from "./gameover1.js";
-import gameover2 from "./gameover2.js";
-import inicioroxo from "./inicioroxo.js";
-import iniciov from "./iniciov.js"
-import termo from "../teste_puzzle/termo.js";
-import quebraCabeca from "../teste_puzzle/quebraCabeca.js";
-import tetravex from "../teste_puzzle/tetravex.js";
-import sudoku from "../teste_puzzle/sudoku.js";
-import genius from "../teste_puzzle/genius.js";
-import helldivers from "../teste_puzzle/helldivers.js";
-import creditos from "./creditos.js";
+import scene0 from "./scene0.js";
 
 class Game extends Phaser.Game {
   constructor() {
     super(config);
 
-    this.room = new URLSearchParams(location.search).get("room") || "main";
+    //this.room = new URLSearchParams(location.search).get("room") || "main";
 
-    this.scene.add("start", start);
+    
     this.scene.add("scene0", scene0);
-    this.scene.add("scene1", scene1);
-    this.scene.add("scene2", scene2);
     this.scene.add("preloader", preloader);
-    this.scene.add("gameover1", gameover1);
-    this.scene.add("gameover2", gameover2);
-    this.scene.add("inicioroxo", inicioroxo);
-    this.scene.add("iniciov", iniciov);
-    this.scene.add("termo", termo);
-    this.scene.add("quebraCabeca", quebraCabeca);
-    this.scene.add("tetravex", tetravex);
-    this.scene.add("sudoku", sudoku);
-    this.scene.add("genius", genius);
-    this.scene.add("helldivers", helldivers);
-    this.scene.add("creditos", creditos);
-    this.scene.start("start");
-
-    this.audio = document.querySelector("audio");
+    this.scene.start("preloader", { startScene: "scene0" });
+  }
+}
+   /* this.audio = document.querySelector("audio");
     this.iceServers = {
       iceServers: [
         {
@@ -81,7 +55,7 @@ class Game extends Phaser.Game {
       });
     });
   }
-}
+}*/
 
 window.onload = () => {
   window.game = new Game();

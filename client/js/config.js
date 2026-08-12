@@ -2,14 +2,16 @@ var config = {
   type: Phaser.AUTO,
   width: 1100,
   height: 400,
-  input: {
-    gamepad: true,
-  },
   parent: "game-container",
+  input: {
+    touch: {
+      target: "game-container"
+    }
+  },
   physics:{
     default: "arcade",
     arcade: {
-      gravity: { x: 0, y: 900 },
+      gravity: { x: 0, y: 0 },
       debug: false, 
     } 
   },
