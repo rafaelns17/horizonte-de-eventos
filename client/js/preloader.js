@@ -3,7 +3,7 @@ class preloader extends Phaser.Scene {
     super("preloader");
   }
 
-  init(data) {
+/*  init(data) {
 
     const bg = this.add.rectangle(0, 0, this.scale.width, this.scale.height, 0x000000).setOrigin(0, 0).setDepth(0);
     const imageRatio = bg.width / bg.height;
@@ -27,7 +27,7 @@ class preloader extends Phaser.Scene {
     );
   }
 
-  preload() {
+  /*preload() {
     // --- SISTEMA DA BARRA DE CARREGAMENTO VISUAL (GRAPHICS) ---
     // Criamos os componentes gráficos para evitar bugs de posicionamento e escala
     const progressBox = this.add.graphics();
@@ -56,11 +56,11 @@ class preloader extends Phaser.Scene {
     this.load.setPath("assets/");
 
   
-  }
+  }*/
 
   create() {
 
-    this.add.text(this.scale.width / 2, this.scale.height / 2, "Carregamento concluído!", {
+    this.add.text(this.scale.width / 2, this.scale.height / 2, "Feito com amor,\npara o meu amor!", {
       font: "32px Arial",
       fill: "#63ff8a",
     }).setOrigin(0.5, 0.5).setDepth(1);
