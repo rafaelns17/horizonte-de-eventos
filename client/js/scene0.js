@@ -5,9 +5,9 @@ class scene0 extends Phaser.Scene {
 
   create() {
     //faça atextbox ter um contorno marrom
-    this.textBox = this.add.rectangle(this.cameras.main.width / 2, (this.cameras.main.height / 2) - 200, 350, 100, 0xffffff);
+    this.textBox = this.add.rectangle(this.cameras.main.width / 2, (this.cameras.main.height / 2) - 200, 400, 170, 0xffffff);
     this.textBox.setStrokeStyle(5, 0x8B4513); // Define a borda marrom
-    this.text = this.add.text((this.cameras.main.width / 2), (this.cameras.main.height / 2) - 200, "", { fontSize: "16px", fill: "#000", wordWrap: { width: 300 } }).setOrigin(0.5);
+    this.text = this.add.text((this.cameras.main.width / 2) - 10, (this.cameras.main.height / 2) - 200, "", { fontSize: "23px", fill: "#000", fontStyle: "bold", wordWrap: { width: 350 } }).setOrigin(0.5); 
 
     this.button = this.add.rectangle((this.cameras.main.width / 2) - 50, (this.cameras.main.height / 2), 250, 70, 0x00ff00);
     this.button.setStrokeStyle(5, 0x8B4513); // Define a borda marrom
