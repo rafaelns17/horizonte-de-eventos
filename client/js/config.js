@@ -1,13 +1,14 @@
 var config = {
   type: Phaser.AUTO,
-  width: 1100,
-  height: 400,
+  width: 430,
+  height: 932,
   parent: "game-container",
-  input: {
+  cursos: true,
+  /*input: {
     touch: {
       target: "game-container"
     }
-  },
+  },*/
   physics:{
     default: "arcade",
     arcade: {
