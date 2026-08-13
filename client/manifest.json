@@ -1,6 +1,6 @@
 {
   "name": "Versiculo aleatório",
-  "short_name": "Versiculo aleatório",
+  "short_name": "Versiculo",
   "description": "sorteiro de um versiculo onde estiver",
   "start_url": "./index.html",
   "display": "fullscreen",
