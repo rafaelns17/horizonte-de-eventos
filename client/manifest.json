@@ -1,12 +1,12 @@
 {
   "name": "Versiculo aleatório",
-  "short_name": "Meu Jogo",
+  "short_name": "Versiculo aleatório",
   "description": "sorteiro de um versiculo onde estiver",
   "start_url": "./index.html",
   "display": "fullscreen",
   "background_color": "#000000",
   "theme_color": "#333333",
-  "orientation": "landscape",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "lirio.png",
