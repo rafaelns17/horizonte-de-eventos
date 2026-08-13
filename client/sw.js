@@ -1,4 +1,4 @@
-const CACHE_NAME = 'phaser-jogo-v3';
+const CACHE_NAME = 'phaser-jogo-v4';
 
 // Lista APENAS com arquivos individuais (nunca coloque nomes de pastas soltas)
 const filesToCache = [
@@ -21,10 +21,28 @@ const filesToCache = [
 ];
 
 // Instalação: Baixa os arquivos e coloca no cache
-self.addEventListener('install', (event) => {
+/*self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(filesToCache))
+  );
+});*/
+// Substitua o seu evento 'install' no sw.js por este:
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      console.log('📦 Testando e salvando arquivos no Cache...');
+      
+      // Testa arquivo por arquivo em vez de tentar tudo de uma vez
+      return Promise.all(
+        filesToCache.map((url) => {
+          return cache.add(url).catch((err) => {
+            // Se algum arquivo der erro, ele avisa no console exatamente qual é!
+            console.error(`❌ ERRO NO CACHE: O arquivo "${url}" não foi encontrado!`, err);
+          });
+        })
+      );
+    })
   );
 });
 
