@@ -1,4 +1,4 @@
-const CACHE_NAME = 'phaser-jogo-v4';
+const CACHE_NAME = 'phaser-jogo-v5';
 
 // Lista APENAS com arquivos individuais (nunca coloque nomes de pastas soltas)
 const filesToCache = [
