@@ -1,4 +1,4 @@
-const CACHE_NAME = 'phaser-jogo-v1';
+const CACHE_NAME = 'phaser-jogo-v2';
 
 // Adicione aqui todos os arquivos que seu jogo precisa para rodar
 const filesToCache = [
