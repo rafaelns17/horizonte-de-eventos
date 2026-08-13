@@ -9,7 +9,7 @@ const filesToCache = [
   './lirio.png',
   './js/game.js',
   './js/phaser.min.js',
-  './js/socket.io.min.js',
+ // './js/socket.io.min.js',
   './js/config.js',
   './js/preloader.js',
   './js/scene0.js'
