@@ -1,4 +1,4 @@
-const CACHE_NAME = 'phaser-jogo-v5';
+const CACHE_NAME = 'phaser-jogo-v5.1';
 
 // Lista APENAS com arquivos individuais (nunca coloque nomes de pastas soltas)
 const filesToCache = [
@@ -9,10 +9,11 @@ const filesToCache = [
   './lirio.png',
   './js/game.js',
   './js/phaser.min.js',
- // './js/socket.io.min.js',
   './js/config.js',
   './js/preloader.js',
-  './js/scene0.js'
+  './js/scene0.js',
+  './js/scene1.js',
+  './js/inicio.js',
   
   // ⚠️ Liste aqui TODAS as imagens/sons da sua pasta assets uma por uma:
   // './assets/personagem.png',

@@ -13,7 +13,7 @@ class scene0 extends Phaser.Scene {
     this.button.setStrokeStyle(5, 0x8B4513); // Define a borda marrom
     this.button.setInteractive();
     this.button.on('pointerdown', () => {
-      this.button.setFillStyle(0x008000); // verde mais escuro
+       this.textBox.setStrokeStyle(5, 0x8B4513); // Define a borda marrom // verde mais escuro
      // this.add.text(this.cameras.main.width / 2, (this.cameras.main.height / 2) + 100, "Botão pressionado!", { fontSize: "32px", fill: "#000" }).setOrigin(0.5);
     });
     this.button.on('pointerup', () => {
