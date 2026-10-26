@@ -1,4 +1,4 @@
-class inicio extends Phasher.scene {
+class inicio extends Phasher.Scene {
 
   constructor() {
     super("inicio");
